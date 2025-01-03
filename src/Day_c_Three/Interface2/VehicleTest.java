@@ -4,7 +4,8 @@
 package Day_c_Three.Interface2;
 
 
-interface Vehicle {
+interface Vehicle
+{
     void start();
 }
 
