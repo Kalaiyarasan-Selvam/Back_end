@@ -1,4 +1,4 @@
-package Access_Modifier.PersonAccess;
+package Day_d_Five.Access_Modifier.PersonAccess;
 
 public class Person {
     public String name;

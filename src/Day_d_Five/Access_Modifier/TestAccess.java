@@ -1,5 +1,6 @@
 package Day_d_Five.Access_Modifier;
-import Access_Modifier.PersonAccess.*;
+import Day_d_Five.Access_Modifier.PersonAccess.Employee;
+
 public class TestAccess {
     public static void main(String[] args) {
         Employee e=new Employee("Mani",21,"Bhavani",50000);
