@@ -1,4 +1,4 @@
-package Java_Lang_Classes;
+package Day_e_six.Java_Lang_Classes;
 
 public class Java_langClass {
     public static void main(String[] args) {
