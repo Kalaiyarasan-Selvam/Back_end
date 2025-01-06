@@ -24,7 +24,7 @@ public class Reflection {
                 {
                     System.out.println(fie[i]);
                 }
-                Person p1=(Person)con[1].newInstance("Hariharasuthan M","Erode","Software Developer");
+                Person p1=(Person)con[1].newInstance("kalai ","Erode","Software Developer");
                 for(int i=0;i<met.length;i++)
                 {
                     if(met[i].getName().indexOf("getDetails")!=-1)
@@ -33,7 +33,7 @@ public class Reflection {
                         met[i].invoke(p1);
                     }
                 }
-                Person p2=(Person)con[0].newInstance("Computer Science and Engineering");
+                Person p2=(Person)con[0].newInstance("iT");
                 for(int i=0;i<met.length;i++)
                 {
                     if(met[i].getName().indexOf("getDept")!=-1)
