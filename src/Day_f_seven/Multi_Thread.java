@@ -44,6 +44,7 @@ public class Multi_Thread {
         Square thread2=new Square();
         thread1.start();
         thread2.start();
+
         System.out.println("Thread started : ");
     }
 }
