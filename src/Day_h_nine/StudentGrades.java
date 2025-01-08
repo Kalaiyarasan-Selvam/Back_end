@@ -18,12 +18,12 @@ public class StudentGrades
     }
     public static double  average( Vector<Integer> vect)
     {
-        int sum=0;
+        double sum=0;
         for(int i:vect)
         {
             sum+=i;
         }
-        return sum/vect.size();
+        return sum/(double)vect.size();
     }
 
     public static void main(String[] args) {
