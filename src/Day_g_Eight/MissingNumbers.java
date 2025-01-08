@@ -1,5 +1,7 @@
 package Day_g_Eight;
 
+import java.util.Comparator;
+
 public class MissingNumbers
 {
     public static void main(String[] args) {
@@ -16,7 +18,5 @@ public class MissingNumbers
             sum+=nums[i];
         }
         return total-sum;
-
-
     }
 }
