@@ -9,7 +9,7 @@ public class Set
         Scanner scan=new Scanner(System.in);
 
         LinkedHashSet<String> set=new LinkedHashSet<>();
-        System.out.println("Enter names to add to the set (comma-separated):");
+        System.out.println("Enter names ");
         String input = scan.nextLine();
         String[] names = input.split(",");
 
