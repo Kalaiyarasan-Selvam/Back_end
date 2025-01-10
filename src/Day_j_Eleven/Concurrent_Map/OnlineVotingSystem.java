@@ -10,7 +10,7 @@ public class OnlineVotingSystem {
     }
 
     private static void handleVote(String candidate) {
-        votes.merge(candidate, 1, Integer::sum);
+        votes.put(candidate,votes.get(candidate)+1);
     }
 
     private static void simulateVotingUsingExecutorService() throws InterruptedException {
@@ -43,11 +43,6 @@ public class OnlineVotingSystem {
             }
         });
 
-        executorService.shutdown();
-
-        if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
-            executorService.shutdownNow();
-        }
     }
 
     private static void displayResults() {
