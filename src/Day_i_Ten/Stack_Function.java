@@ -26,7 +26,9 @@ public class Stack_Function {
             }
             else if (action.equals("Undo")) {
                 if (!actions.isEmpty()) {
-                    currentText = actions.pop();
+                    System.out.println(currentText);
+
+                    System.out.println(actions.peek());
                 } else {
                     System.out.println("No actions to undo.");
                 }

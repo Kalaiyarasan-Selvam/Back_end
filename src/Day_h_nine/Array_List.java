@@ -6,11 +6,12 @@ import java.util.Scanner;
 public class Array_List
 {
     public static void main(String[] args) {
-        ArrayList<String> arr=new ArrayList<>();
+        ArrayList<String> arr=new ArrayList<String>();
         Scanner scan=new Scanner(System.in);
 
         System.out.println("no .of .items");
         int size=scan.nextInt();
+        System.out.println("enter items");
         for(int i=0;i<size;i++) {
             arr.add(scan.next());
         }
@@ -20,6 +21,7 @@ public class Array_List
         arr.remove(remove);
 
         System.out.println("Shopping List");
+        System.out.println(arr);
         System.out.println(arr);
     }
 }
