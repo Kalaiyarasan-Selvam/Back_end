@@ -1,13 +1,14 @@
 package MiniProject;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
+public class Student {
     private int id;
     private String name;
     private int age;
     private String grade;
     private String email;
+
+    // ✅ No-argument constructor required for Jackson deserialization
+    public Student() {}
 
     public Student(int id, String name, int age, String grade, String email) {
         this.id = id;
@@ -17,14 +18,24 @@ public class Student implements Serializable {
         this.email = email;
     }
 
+    // ✅ Getters & Setters (required for JSON serialization/deserialization)
     public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
     public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
     public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+
     public String getGrade() { return grade; }
+    public void setGrade(String grade) { this.grade = grade; }
+
     public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
     @Override
     public String toString() {
-        return id + " | " + name + " | Age: " + age + " | Grade: " + grade + " | Email: " + email;
+        return "Student{id=" + id + ", name='" + name + "', age=" + age + ", grade='" + grade + "', email='" + email + "'}";
     }
 }

@@ -1,75 +1,38 @@
 package MiniProject;
 
-import java.util.Scanner;
-
 public class StudentAdmin {
     public static void main(String[] args) {
-        InternalStudentManagementSystem sms = new InternalStudentManagementSystem();
-        Scanner sc = new Scanner(System.in);
+        InternalStudentManagementSystem system = new InternalStudentManagementSystem();
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
 
         while (true) {
-            System.out.println("\n1. Add Student\n2. View Students\n3. Search Student\n4. Update Student\n5. Delete Student\n6. Sort Students\n7. Filter by Grade\n8. Exit");
-            System.out.print("Enter choice: ");
-            int choice = sc.nextInt();
+            System.out.println("\n=== Student Management System ===");
+            System.out.println("1. Add Student");
+            System.out.println("2. View Students");
+            System.out.println("3. Search Student");
+            System.out.println("4. Delete Student");
+            System.out.println("5. Sort Students");
+            System.out.println("6. Filter By Grade");
+            System.out.println("7.Update student  ");
+            System.out.println("8.exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
 
             switch (choice) {
-                case 1:
-                    System.out.println("---- Enter Student Details ----");
-                    System.out.print("ID: ");
-                    int id = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("Name: ");
-                    String name = sc.nextLine();
-                    System.out.print("Age: ");
-                    int age = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("Grade: ");
-                    String grade = sc.nextLine();
-                    System.out.print("Email: ");
-                    String email = sc.nextLine();
-                    sms.addStudent(id, name, age, grade, email);
-                    break;
-                case 2:
-                    sms.viewStudents();
-                    break;
-                case 3:
-                    System.out.print("Enter Student ID: ");
-                    sms.searchStudent(sc.nextInt());
-                    break;
-                case 4:
-                    System.out.print("Enter Student ID to Update: ");
-                    int uid = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("New Name: ");
-                    String newName = sc.nextLine();
-                    System.out.print("New Age: ");
-                    int newAge = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("New Grade: ");
-                    String newGrade = sc.nextLine();
-                    System.out.print("New Email: ");
-                    String newEmail = sc.nextLine();
-                    sms.updateStudent(uid, newName, newAge, newGrade, newEmail);
-                    break;
-                case 5:
-                    System.out.print("Enter Student ID to Delete: ");
-                    sms.deleteStudent(sc.nextInt());
-                    break;
-                case 6:
-                    System.out.print("Sort by (name/age): ");
-                    sms.sortStudents(sc.next());
-                    break;
-                case 7:
-                    System.out.print("Enter Grade: ");
-                    sms.filterByGrade(sc.next());
-                    break;
-                case 8:
-                    System.out.println("Exiting...");
-                    sc.close();
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice!");
+                case 1 -> system.addStudent();
+                case 2 -> system.viewStudents();
+                case 3 -> system.searchStudent();
+                case 4 -> system.deleteStudent();
+                case 5 -> system.sortStudents();
+                case 6->system.filterByGrade();
+                case 7-> system.updateStudent();
+                case 8-> {
+                    System.out.println("Exiting... Thank you!");
+                    return;
+                }
+                default -> System.out.println("Invalid choice! Please try again.");
             }
         }
     }
